@@ -1,6 +1,6 @@
 {
   "name": "yy-vui",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "private": false,
   "description": "基于element二次封装",
   "author": "lantingboy",
@@ -16,8 +16,7 @@
     "core-js": "^3.8.3",
     "element-ui": "^2.15.6",
     "vue": "^2.6.14",
-    "vue-router": "^4.1.2",
-    "yy-vui": "^0.1.1"
+    "yy-vui": "^0.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
