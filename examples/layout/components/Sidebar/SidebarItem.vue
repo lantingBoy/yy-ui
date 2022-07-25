@@ -41,6 +41,7 @@
 
 <script>
 import path from 'path'
+// const path = require("path")
 import { isExternal } from '@/utils/utils.js'
 import Item from './Item'
 import AppLink from './Link'

@@ -12,9 +12,9 @@ import Element from 'element-ui'
 import '@/assets/css/element-variables.scss'
 
 // import Vui from '../packages' // 二次封装组件
-// import Vui from '../lib/index.umd.min.js'
+import Vui from '../lib/index.umd.min.js'
 // console.log("🚀 ~ file: main.js ~ line 23 ~ Vui", Vui)
-import Vui from 'yy-vui'
+// import Vui from 'yy-vui'
 
 Vue.use(Element)
 
