@@ -1,15 +1,23 @@
 {
   "name": "yy-vui",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false,
+  "description": "基于element二次封装",
+  "author": "lantingboy",
+  "license": "MIT",
+  "main": "lib/index.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name index --dest lib ./packages/index.js --no-clean"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "element-ui": "^2.15.6",
+    "vue": "^2.6.14",
+    "vue-router": "^4.1.2",
+    "yy-vui": "^0.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -19,6 +27,8 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "sass": "^1.26.10",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {

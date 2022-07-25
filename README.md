@@ -1,24 +1,18 @@
 # yy-vui
 
-## Project setup
+## npm
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
+npm i yy-vui -save
 ```
 
-### Compiles and minifies for production
+### yarn
 ```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+yarn add yy-vui
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 使用 - main.js
+```
+import vui from  'yy-vui'
+Vue.use(vui)
+```
+
