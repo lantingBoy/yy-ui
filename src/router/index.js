@@ -42,7 +42,7 @@ export const constantRoutes = [
       {
         path: 'index',
         name: '首页',
-        component: () => import('@/views/index/index.vue'),
+        component: () => import('@/pages/index/index.vue'),
         meta: {
           title: '首页',
           name: 'index'

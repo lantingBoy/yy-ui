@@ -1,71 +1,66 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <InputSearch
-      tips="请输入用户名"
-      :searchValue="searchValue"
-      :selectValue="selectValue"
-      @click="search"
-      @change="typeChange"
-      :searchCondition="searchCondition"
-    ></InputSearch>
-    <Input placeholder="nihao"/>
+    <router-view v-if="isRouterAlive"></router-view>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-// import SearchInput from '../packages/SearchInput'
 
-// import {Input} from '../lib/index.umd.min.js'
 export default {
-  name: 'App',
-  components: {
-    // HelloWorld,
-    // SearchInput,
-    // Input
-  },data(){
-    return{
-       searchValue: '', // 查询条件
-      selectValue: '0', // 初始化查询条件
-      searchCondition: [
-        {
-          label: '新增待审批',
-          value: '0'
-        },
-        {
-          label: '新增已通过',
-          value: '1'
-        },
-        {
-          label: '新增已驳回',
-          value: '2'
-        }
-      ]
+  name: 'app',
+  provide () {
+    return {
+      reload: this.reload
     }
   },
-  methods:{
-      search (val) {
-      console.log('点击查询按钮', val)
-    },
-    typeChange (val) {
-      this.searchValue = ''
-      this.selectValue = val
+  data () {
+    return {
+      isRouterAlive: true
+    }
+  },
+  created () {
+    document.title = '基础组件'
+  },
+  methods: {
+    reload () {
+      this.isRouterAlive = false
+      this.$nextTick(() => {
+        this.isRouterAlive = true
+      })
     }
   }
-
-
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #333;
+  font-family: SourceHanSansCN-Normal, PingFangSC-Regular, Microsoft YaHei,
+    SimSun, Arial, Helvetica, Verdana, sans-serif !important;
+  font-size: 12px;
+  background-color: #ededed;
+  /* margin-top: 60px; */
 }
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+/* 滚动条的宽度*/
+/* ::-webkit-scrollbar {
+  width: 17px;
+  height: 17px;
+} */
+/* 滚动条的滑块*/
+/* ::-webkit-scrollbar-thumb {
+  background-color: #b3b3b3;
+  border-radius: 3px;
+} */
 </style>

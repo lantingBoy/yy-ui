@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import Screenfull from './Screenfull.vue'
+import Screenfull from './Screenfull'
 import variables from '@/assets/css/variables.scss'
 export default {
   name: 'TagsView',

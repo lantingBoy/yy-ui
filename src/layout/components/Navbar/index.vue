@@ -8,7 +8,7 @@
     <div class="right-menu">
       <el-dropdown class="avatar-container flex-box flex-ver right-menu-item hover-effect">
         <div class="avatar-wrapper">
-          <img src="@/assets/img/logo.jpg" class="user-avatar" />
+          <img src="@/assets/img/logo.png" class="user-avatar" />
         </div>
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
